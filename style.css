@@ -1,0 +1,582 @@
+/*Estilo geral*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #8c3a2b;
+    height: 100vh;
+    background-image: url(Cópia\ de\ Essência\ Paraibana.jpg);
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    color: #dfd2b5;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #163b31;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover,
+form .btn-enviar input[type=submit]:hover {
+    box-shadow: 0px 0px 8px #dfd2b5;
+    transition: .2s;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color:#dfd2b5;
+    font-size: 45px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #163b31;
+    font-size: 50px;
+}
+
+/*Estilo do cabeçalho*/
+header {
+    padding: 40px 4%;
+
+
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+header a {
+    color: #dfd2b5;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+
+
+}
+
+header nav.menu-desktop a:hover {
+    color:#163b31;
+    transform: scale(1.05);
+
+}
+
+header nav ul {
+    list-style-type: none;
+
+
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+
+
+}
+
+/*ESTILO DO MENU MOBILE*/
+.btn-abrir-menu{
+    display: none;
+}
+
+.btn-abrir-menu i{
+    color:   #dfd2b5;
+    font-size: 45px;
+}
+.menu-mobile{
+    background-color:#dfd2b5;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile .btn-fechar i{
+    color:  #8c3a2b;
+    font-size: 30px;
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    color: #8c3a2b;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+.menu-mobile nav ul li a:hover{
+    background-color:#dfd2b5;
+    color:  #163b31;
+}
+.overlay-menu{
+    background-color:rgba(91, 97, 97, 0.678);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+} 
+
+
+/*ESTILO DO TOPO DO SITE*/
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: #dfd2b5;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #163b31;
+    font-size: 84px;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #dfd2b5;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/*ESTILO DAS ESPECIALIDADES*/
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .CAFE-box {
+    color: rgb(91, 97, 97);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+    background-color: #dfd2b5;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/p/AF1QipMVUR-E7NIKXHlPHvR9nyUfXd3xgFpbCxgwFcwR=s680-w680-h510); 
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+}
+
+.especialidades .CAFE-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #dfd2b5;
+}
+
+.especialidades .CAFE-box i {
+    font-size: 70px;
+    color: #8c3a2b;
+}
+
+.especialidades .CAFE-box h3 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: #dfd2b5;
+}
+.especialidades .CAFE-box p{
+    color: #dfd2b5;
+}
+
+.especialidades .ALMOCO-box {
+    color: rgb(91, 97, 97);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+    background-color: #dfd2b5;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/p/AF1QipM9GuJtqoaMoRQ7ot8aTjWQFkPTSOKgRE_qYZVM=s680-w680-h510);
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+}
+.especialidades .ALMOCO-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #dfd2b5;
+}
+
+.especialidades .ALMOCO-box i {
+    font-size: 70px;
+    color: #8c3a2b;
+}
+
+.especialidades .ALMOCO-box h3 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: #dfd2b5;
+}
+.especialidades .ALMOCO-box p{
+    color: #dfd2b5;
+}
+
+.especialidades .JANTA-box {
+    color: rgb(91, 97, 97);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+    background-color: #dfd2b5;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://experiencias.omelhordavida.com.br/media/catalog/product/cache/fd94aeb996e5ad8de56255a5f9d6b22f/c/a/captura_de_tela_2023-08-25_143736_1_1.png); 
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+}
+
+.especialidades .JANTA-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #dfd2b5;
+}
+
+.especialidades .JANTA-box i {
+    font-size: 70px;
+    color: #8c3a2b;
+}
+
+.especialidades .JANTA-box h3 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: #dfd2b5;
+}
+.especialidades .JANTA-box p{
+    color: #dfd2b5;
+}
+
+
+/*ESTILO SOBRE*/
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: rgb(91, 97, 97);
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    color: #163b31;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #dfd2b5;
+    display: block;
+    font-size: 45px;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+    color: #dfd2b5;
+}
+.sobre .txt-sobre p span {
+    color: #163b31;
+    font-size: 20px;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #163b31;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.btn-social button i {
+    color: #dfd2b5;
+}
+
+.img-sobre img {
+    border-radius: 20px;
+
+
+}
+
+/*ESTILO MEU PORTIFOLIO*/
+section.portifolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #dfd2b5;
+}
+
+section.portifolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    margin: 22px 11px;
+    width: 300px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 0 20px #dfd2b5;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  #163b31;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #dfd2b5;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 2;
+}
+
+/*ESTILO DO FORMULARIO*/
+section.formulario {
+    padding: 80px 4%;
+
+}
+
+section.formulario h2 {
+    margin-top: 40px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color:  #163b31;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #dfd2b5;
+    font-size: 18px;
+}
+
+form input::placeholder {
+    color: #dfd2b5;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form textarea::placeholder {
+    color: #dfd2b5;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit] {
+    width: 120px;
+    background-color:  #163b31;
+    color:  #dfd2b5;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/*ESTILO RODAPE*/
+footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #a39a85;
+}
+
+footer .flex {
+    justify-content: center;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 3px solid #dfd2b5;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 1020px) {
+
+    /*CLASSES GERAIS*/
+    .flex {
+        flex-direction: column;
+    }
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+
+    /*CABEÇALHO*/
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    /*TOPO DO SITE*/
+    section.topo-do-site .flex {
+        gap: 20px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /*ESTILO DAS ESPECIALIDADES*/
+    .btn-abrir-menu{
+        display: block;
+    }
+
+    section.especialidades {
+        padding: 40px 9%;
+    }
+
+    /*SOBRE*/
+    section.sobre .flex {
+        flex-direction: column-reverse
+    }
+    section.sobre{
+        padding: 80px 8%;
+    }
+    .sobre .txt-sobre h2 {
+        font-size: 32px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .sobre .txt-sobre h2 span {
+        font-size: 35px;
+    }
+    .btn-social{
+        text-align: center;
+    }
+    .img-sobre img {
+        width: 100%;
+    }
+
+    /*PORTIFOLIO*/
+    section.portifolio {
+        padding: 80px 8%;
+    }
+    .img-port {
+        margin: 22px 11px;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    section.portifolio .flex{
+        gap: 60px;
+    }
+
+    /*RODAPE*/
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .line-footer{
+        text-align: center;
+    }
+
+}
